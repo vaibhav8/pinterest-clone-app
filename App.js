@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-      
+
         <View style={styles.header}>
           <View style={styles.nav}>
            <Ionicons name="md-arrow-round-back" size={45} color="black" />
@@ -23,7 +23,7 @@ export default class App extends Component {
         </View>
 
         <View style={styles.pic}>
-          <Text>Photograph</Text>
+          <Text>Photograph or Videos</Text>
         </View>
 
         <View style={styles.middleBar}>
@@ -32,17 +32,16 @@ export default class App extends Component {
             <Text>World needs you!</Text>
           </View>
           <View style={styles.visitButton}>
-            <Text>Visit</Text>
+            <Text style={styles.saveText1}>Visit</Text>
           </View>
         </View>
 
         <View style={styles.lastBar}>
           <View style={styles.roundPic}>
-            <Text>Round Pic</Text>
           </View>
           <View style={styles.textInfo}>
-           <Text><Text style={styles.textBold}>Vaibhao Dhage </Text>likes <Text style={styles.textBold}>React Native</Text></Text>
-           <Text>Actively seeking full-time opportunities in Web and mobile development! Knowledge of Software Development Life Cycle, Software Testing Life Cycle, Agile and Scrum Methodologies!</Text>
+           <Text><Text style={styles.textBold}>Vaibhao </Text>likes <Text style={styles.textBold}>React Native</Text></Text>
+           <Text style={{marginTop: 10}}>Actively seeking full-time opportunities in Web and mobile development! Knowledge of Software Development Life Cycle, Software Testing Life Cycle, Agile and Scrum Methodologies!</Text>
           </View>
         </View>
            
@@ -54,29 +53,32 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    alignSelf: 'stretch',
     alignItems: 'center',
     justifyContent: 'center'
   },
   header: {
     flex: 0.6,
-    backgroundColor:'lightgreen',
-    alignSelf: 'stretch',
+    backgroundColor:'white',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    alignItems: 'flex-end'
+    alignItems: 'center'
   },
   nav: {
-    flex: 2,
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  },
-  saveButton: {
-    flex: 1,
+    flex: 3,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    borderWidth: 4,
-    borderStyle: 'solid'
+    marginRight: 30
+  },
+  saveButton: {
+    flex: 1.5,
+    marginRight: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    borderWidth: 3,
+    borderStyle: 'solid',
+    backgroundColor: 'lightgray',
+    borderRadius: 10
   },
   saveText: {
     fontSize: 20,
@@ -85,14 +87,64 @@ const styles = StyleSheet.create({
   },
   pic: {
     flex: 1,
-    backgroundColor: 'powderblue'
+    backgroundColor: 'powderblue',
+    marginRight: 10,
+    marginLeft: 10,
+    borderRadius: 10,
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   middleBar: {
     flex: 0.5,
-    backgroundColor: 'lime'
+    alignSelf: 'stretch',
+    flexDirection: 'row',
+    marginRight: 10,
+    marginLeft: 10,
+    justifyContent: 'space-between',
+    borderRadius: 10
+  },
+  content: {
+    flex: 2, 
+    padding: 30
+  },
+  visitButton: {
+    flex: 1,
+    borderWidth: 3,
+    borderStyle: 'solid',
+    margin: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    backgroundColor: 'lightgray',
+  },
+  saveText1: {
+    fontSize: 20
   },
   lastBar: {
     flex: 1,
-    backgroundColor: 'cyan'
+    flexDirection: 'row',
+    backgroundColor: 'powderblue',
+    marginRight: 10,
+    marginLeft: 10,
+    borderRadius: 10,
+  },
+  roundPic: {
+    flex: 0.6,
+    margin: 30,
+    borderStyle: 'solid',
+    borderWidth: 3,
+    width: 70,
+    height: 75,
+    borderColor: 'black',
+    backgroundColor: 'lightgray',
+    borderRadius: 50
+  },
+  textInfo: {
+    flex: 2,
+    marginTop: 10
+  },
+  textBold: {
+    fontWeight: 'bold'
   }
 });
